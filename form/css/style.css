@@ -1,0 +1,213 @@
+html {
+  box-sizing: border-box;
+  font-size: 14px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  --primary-color: rgb(12, 58, 210);
+  --border-color: rgb(229, 229, 229);
+
+  color: rgb(36, 49, 98);
+  background-color: rgb(240, 242, 251);
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+.container {
+  width: 436px;
+  margin: auto;
+  margin-top: 70px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 4px;
+  padding: 32px;
+  background-color: white;
+  padding-right: 40px; 
+}
+
+.logo {
+  /* margin-left: 5px;
+  height: 60px;
+  margin-top: 5px; */
+  width: 200px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+
+.payment-method {
+  /*display: inline-flex;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.payment-method label {
+   width: 76px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.payment-method label .val {
+  /*display: inline-flex;*/
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 105%;
+  height: 36px;
+  padding: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color 0.1s ease-in;
+}
+
+.payment-method label img {
+  /*width: 70px;
+  height: 45px;
+  margin-left: 16px;
+  border: 1px solid grey;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;*/
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.payment-method label:hover .val {
+  border-color: var(--primary-color);
+}
+/*.payment-method label input {
+}
+
+.payment-method label input:checked + .val {
+}*/
+
+.custom-radio {
+  margin-right: 15px;
+}
+
+.custom-radio input {
+ 
+  margin-bottom: 25px;
+}
+
+.custom-radio .lbl {
+  font-size: 17px;
+}
+
+.custom-radio .lbl::before {
+}
+
+.custom-radio .lbl::after {
+}
+
+.custom-radio input:checked + .lbl::before {
+}
+.custom-radio input:checked + .lbl::after {
+}
+
+.field-row {
+  display: flex;
+}
+
+.field-row:last-child {
+}
+
+.field-row .field-gap {
+  padding:  10px 10px 10px 10px;
+}
+
+.field-row .field-wrap{
+  flex: 1;
+}
+
+.field-row .field-wrap .lbl {
+  position: relative;
+  /*left: 40.5%;
+  padding-top: 5px;
+  margin-top: 13px;
+  font-size: 12px;*/
+  bottom: 67%;
+  margin-left: 20px;
+}
+.field-row .field-wrap .field {
+  padding-right: 23px;
+  padding-left: 16px;
+  padding-top: 24px;
+  padding-bottom: 13px;
+  width: 100%;
+  border-radius: 4px;
+  /*margin-top: 7px;
+  margin-bottom: 13px;*/
+  border: 1px solid var(--border-color);
+  margin-left: 5px;
+  font-size: 15px;
+  outline: none !important;
+}
+
+.field-row .field-wrap .field:focus {
+  border-color: blue;
+}
+
+.field-row .field-wrap .field:focus + .lbl {
+  color: blue;
+}
+.btn {
+  margin-left: 5px;
+  margin-top: 10px;
+  padding-right: 135px;
+  padding-left: 135px;
+  padding-top: 16px;
+  padding-bottom: 18px;
+  border-radius: 4px;
+  background-color: blue;
+  border: none;
+  color: #fff;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.btn:hover{
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.btn:active {
+  transform: translateY(4px);
+}
+
+.btn.btn-block {
+}
